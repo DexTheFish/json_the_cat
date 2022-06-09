@@ -12,8 +12,8 @@ const fetchBreedDescription = function(catBreed) {
     if (typeof data === "object") {
       console.log(data.description);
     }
-  });  
-}
+  });
+};
 //   request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, response, body) => {
 //   console.log('error:', error); // Print the error if one occurred
 //   console.log('statusCode:', response && response.statusCode);
@@ -25,5 +25,4 @@ const fetchBreedDescription = function(catBreed) {
 //     console.log(data.description);
 //   }
 // });
-
-const breedDescription = fetchBreedDescription(breed);
+fetchBreedDescription(breed);
