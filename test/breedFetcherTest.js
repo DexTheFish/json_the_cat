@@ -15,4 +15,17 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('complains when given an invalid breed', (done) => {
+    fetchBreedDescription('invalidCatBreed', (err, desc) => {
+      // we expect no error for this scenario
+      assert.equal(err, null);
+
+      const expectedDesc = null;
+
+      // compare returned description
+      assert.equal(expectedDesc, desc);
+
+      done();
+    });
+  });
 });
